@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+#root,html,body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.app{
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1613422795543-71e3aeac5b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    background-color: aliceblue;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(0, 0, 2);
+    border-radius: 50px;
+    padding: 2%;
+
+}
+.heading{
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-weight: bold;
+    font-family: cursive;
+}
+button{
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+    background-color: white;
+    border: 1px solid black;
+    
+
+}
+button:hover{
+    background-color: black;
+    color: white;
+    transition: ease-in-out;
+}
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 40%;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Media query for medium-sized screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .app {
+        background-size: contain; /* Adjust background size as needed */
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Media query for large screens */
+@media screen and (min-width: 1025px) {
+    .card {
+        width: 30%; /* Adjust width as needed */
+        height: 25%; /* Adjust height as needed */
+    }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
